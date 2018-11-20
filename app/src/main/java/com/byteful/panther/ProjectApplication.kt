@@ -1,6 +1,5 @@
 package com.byteful.panther
 
-import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDexApplication
 import com.byteful.panther.di.ApiModule
@@ -8,7 +7,8 @@ import com.byteful.panther.di.AppComponent
 import com.byteful.panther.di.AppModule
 import com.byteful.panther.di.DaggerAppComponent
 import android.support.multidex.MultiDex
-
+import com.byteful.panther.ui.activities.mainactivity.MainActivityComponent
+import com.byteful.panther.ui.activities.mainactivity.MainActivityModule
 
 
 open class ProjectApplication:MultiDexApplication(){
@@ -23,11 +23,16 @@ open class ProjectApplication:MultiDexApplication(){
         createComponent()
     }
 
+    var mainActivityComponent: MainActivityComponent?=null
+
+
     override fun onCreate() {
         super.onCreate()
         appComponent.inject(this)
         sInstance=this
         mConfig= ProjectConfig(this)
+
+        mainActivityComponent=createMainActivityComponent()
     }
 
     /*
@@ -41,6 +46,13 @@ open class ProjectApplication:MultiDexApplication(){
                 .build()
     }
 
+    fun createMainActivityComponent(): MainActivityComponent {
+        return appComponent.plus(MainActivityModule())
+    }
+
+    fun releaseMainActivityComponent() {
+        mainActivityComponent=null
+    }
 
    override fun attachBaseContext(base: Context) {
         super.attachBaseContext(base)

@@ -1,4 +1,4 @@
-package com.byteful.panther.ui.activities
+package com.byteful.panther.ui.activities.mainactivity
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy

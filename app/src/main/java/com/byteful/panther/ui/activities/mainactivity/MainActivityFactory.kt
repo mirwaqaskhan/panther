@@ -1,4 +1,4 @@
-package com.byteful.panther.ui.activities
+package com.byteful.panther.ui.activities.mainactivity
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

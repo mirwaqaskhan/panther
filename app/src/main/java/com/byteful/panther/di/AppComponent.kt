@@ -1,6 +1,9 @@
 package com.byteful.panther.di
 
 import com.byteful.panther.ProjectApplication
+import com.byteful.panther.ui.activities.mainactivity.MainActivityComponent
+import com.byteful.panther.ui.activities.mainactivity.MainActivityModule
+import com.byteful.panther.ui.activities.mainactivity.MainActivityRepository
 import dagger.Component
 import javax.inject.Singleton
 
@@ -14,6 +17,7 @@ import javax.inject.Singleton
 public interface AppComponent{
 
     fun inject(projectApplication: ProjectApplication)
-
+    fun plus(mainActivityModule: MainActivityModule): MainActivityComponent
+    fun inject(mainActivityRepository: MainActivityRepository)
 
 }

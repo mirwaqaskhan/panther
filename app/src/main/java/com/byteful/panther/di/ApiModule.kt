@@ -3,6 +3,8 @@ package com.byteful.panther.di
 import android.util.Log
 import com.byteful.panther.BuildConfig
 import com.byteful.panther.ProjectApplication
+import com.byteful.panther.api.EndPoints
+import com.byteful.panther.utils.Constants
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -91,7 +93,7 @@ class ApiModule(val application: ProjectApplication) {
     @Singleton
     fun provideRetrofitBuilder(okHttpClient: OkHttpClient): Retrofit {
         val builder = Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl(Constants.EndURL)
                 .addConverterFactory(MoshiConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)

@@ -1,4 +1,4 @@
-package com.byteful.panther.ui.activities
+package com.byteful.panther.ui.activities.mainactivity
 
 import dagger.Module
 import dagger.Provides
@@ -12,12 +12,12 @@ public class MainActivityModule{
 
 
     @Provides
-    fun mainActivityRepository():MainActivityRepository {
+    fun mainActivityRepository(): MainActivityRepository {
         return MainActivityRepository()
     }
 
     @Provides
-    fun mainActivityFactory(mainActivityRepository: MainActivityRepository):MainActivityFactory{
+    fun mainActivityFactory(mainActivityRepository: MainActivityRepository): MainActivityFactory {
 
         return MainActivityFactory(mainActivityRepository)
     }
