@@ -2,6 +2,7 @@ package com.byteful.panther.ui.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,7 @@ class CategoriesAdapter(val list:List<PlaylistsItem>,val context:Context):Recycl
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
          holder.setValue(list[position])
+
     }
 
 
@@ -31,8 +33,8 @@ class CategoriesAdapter(val list:List<PlaylistsItem>,val context:Context):Recycl
         val title=itemView.titleTV
 
         fun setValue(playlistsItem: PlaylistsItem){
-            Glide.with(context).load(playlistsItem.coverImagePreviewUrl).into(previewImage);
-            title.text=playlistsItem.nameDisplay
+//            Glide.with(context).load(playlistsItem.coverImagePreviewUrl).into(previewImage);
+         title.text=playlistsItem.nameDisplay
         }
 
     }
