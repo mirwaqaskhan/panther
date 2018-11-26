@@ -6,8 +6,8 @@ import com.squareup.moshi.Json
 data class PlaylistResponse(
 
 	@Json(name="name")
-	val name: String? = null,
+	val name: String,
 
 	@Json(name="playlists")
-	val playlists: List<PlaylistsItem>? = null
+	val playlists: List<PlaylistsItem>
 )

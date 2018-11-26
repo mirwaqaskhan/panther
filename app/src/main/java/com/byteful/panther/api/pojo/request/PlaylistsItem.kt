@@ -5,25 +5,25 @@ import com.squareup.moshi.Json
 data class PlaylistsItem(
 
 	@Json(name="offline_playlist_url")
-	val offlinePlaylistUrl: String,
+	val offline_playlist_url: String,
 
 	@Json(name="cover_image_url")
-	val coverImageUrl: String,
+	val cover_image_url: String,
 
 	@Json(name="cover_image_preview_url")
-	val coverImagePreviewUrl: String,
+	val cover_image_preview_url: String,
 
 	@Json(name="name")
 	val name: String,
 
 	@Json(name="name_display")
-	val nameDisplay: String,
+	val name_display: String,
 
 	@Json(name="playlist_url")
-	val playlistUrl: String,
+	val playlist_url: String,
 
 	@Json(name="available_replay_time")
-	val availableReplayTime: Int,
+	val available_replay_time: Int,
 
 	@Json(name="description")
 	val description: String,
@@ -32,10 +32,10 @@ data class PlaylistsItem(
 	val id: Int,
 
 	@Json(name="name_display_html")
-	val nameDisplayHtml: String,
+	val name_display_html: String,
 
 	@Json(name="total_playtime")
-	val totalPlaytime: Int,
+	val total_playtime: Int,
 
 	@Json(name="updated")
 	val updated: String

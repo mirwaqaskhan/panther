@@ -8,8 +8,11 @@ object Constants{
 
     const val isNetwork="isNetwork"
 
-    val isDebug=true
-    const val EndURL="https://bal-playlist-manager-dev.herokuapp.com/api/"
+    const val isDebug=true
+    const val DemoEndURL="https://bal-playlist-manager-dev.herokuapp.com/api/"
 
+    const val LiveEndURL="https://bal-playlist-manager-dev.herokuapp.com/api/"
+
+    val EndURL=if(isDebug) DemoEndURL else LiveEndURL
 
 }

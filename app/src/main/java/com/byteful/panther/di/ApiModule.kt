@@ -3,7 +3,6 @@ package com.byteful.panther.di
 import android.util.Log
 import com.byteful.panther.BuildConfig
 import com.byteful.panther.ProjectApplication
-import com.byteful.panther.api.EndPoints
 import com.byteful.panther.utils.Constants
 import dagger.Module
 import dagger.Provides

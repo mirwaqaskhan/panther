@@ -33,8 +33,8 @@ class CategoriesAdapter(val list:List<PlaylistsItem>,val context:Context):Recycl
         val title=itemView.titleTV
 
         fun setValue(playlistsItem: PlaylistsItem){
-//            Glide.with(context).load(playlistsItem.coverImagePreviewUrl).into(previewImage);
-         title.text=playlistsItem.nameDisplay
+         Glide.with(context).load(playlistsItem.cover_image_preview_url).into(previewImage);
+         title.text=playlistsItem.name_display
         }
 
     }

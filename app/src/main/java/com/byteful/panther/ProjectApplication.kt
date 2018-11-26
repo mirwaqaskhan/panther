@@ -61,9 +61,7 @@ open class ProjectApplication:MultiDexApplication(){
 
    companion object {
        private lateinit var sInstance: ProjectApplication
-
        private lateinit var mConfig: ProjectConfig
-
    }
 
 }
