@@ -4,6 +4,8 @@ import android.content.Context
 import android.net.ConnectivityManager
 import com.byteful.panther.ProjectApplication
 import com.byteful.panther.api.PantharApiService
+import com.byteful.panther.ui.activities.mainactivity.MainActivityFactory
+import com.byteful.panther.ui.activities.mainactivity.MainActivityRepository
 import com.byteful.panther.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -57,6 +59,16 @@ class AppModule(var application: ProjectApplication){
         return cm.activeNetworkInfo != null && cm.activeNetworkInfo.isConnectedOrConnecting
     }
 
+    @Provides
+    fun mainActivityRepository(): MainActivityRepository {
+        return MainActivityRepository()
+    }
+
+    @Provides
+    fun mainActivityFactory(mainActivityRepository: MainActivityRepository): MainActivityFactory {
+
+        return MainActivityFactory(mainActivityRepository)
+    }
 
 
 }

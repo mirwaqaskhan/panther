@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#231f1f</color>
     <color name="colorAccent">#231f1f</color>
     <color name="bgColor">#231f1f</color>
+    <color name="listItemColor">#1E1E1E</color>
+    <color name="radioBtnColor">#FF1E44</color>
+    <color name="smallTextFieldColor">#ffffff</color>
 </resources>

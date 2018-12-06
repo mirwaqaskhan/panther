@@ -1,4 +1,4 @@
-package com.byteful.panther.api.pojo.request
+package com.byteful.panther.api.pojo.response
 
 import com.squareup.moshi.Json
 

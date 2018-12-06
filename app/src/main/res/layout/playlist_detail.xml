@@ -22,6 +22,8 @@
 
         <include layout="@layout/panthar_header_layout"/>
 
+        <include layout="@layout/toolbar"/>
+
     </android.support.design.widget.CollapsingToolbarLayout>
 
 </android.support.design.widget.AppBarLayout>

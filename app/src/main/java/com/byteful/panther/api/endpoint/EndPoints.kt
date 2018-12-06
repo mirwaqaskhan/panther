@@ -9,8 +9,9 @@ import com.byteful.panther.utils.Constants
  */
 object EndPoints{
 
-    const val ListEndPoint:String="playlist-group/1/"
+    const val ListEndPoint:String="playlist-group/{path_ID}"
 
+    const val ListEndPointOffline:String="offline-playlist/{path_ID}"
 }
 
 

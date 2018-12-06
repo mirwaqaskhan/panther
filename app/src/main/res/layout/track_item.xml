@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgColor"
+    android:layout_marginTop="1sp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/trackImageIV"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cover"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/titleTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16:33"
+        android:textSize="12sp"
+        android:alpha="0.5"
+        android:textColor="@color/smallTextFieldColor"
+        android:fontFamily="@font/rubik_regular"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/trackImageIV"
+        app:layout_constraintTop_toTopOf="@+id/trackImageIV"
+        app:layout_constraintBottom_toTopOf="@+id/songTitleTV"
+        />
+
+
+    <TextView
+        android:id="@+id/songTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song title"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/trackImageIV"
+        app:layout_constraintTop_toBottomOf="@+id/titleTime"
+        app:layout_constraintBottom_toTopOf="@+id/artistTV"
+        />
+
+
+    <TextView
+        android:id="@+id/isExplictTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explicit"
+        android:background="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:alpha="0.5"
+        android:padding="2dp"
+        android:textColor="@color/smallTextFieldColor"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/songTitleTV"
+        app:layout_constraintBaseline_toBaselineOf="@+id/songTitleTV"
+        />
+
+
+    <TextView
+        android:id="@+id/artistTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16:33"
+        android:textSize="12sp"
+        android:alpha="0.5"
+        android:textColor="@color/smallTextFieldColor"
+        android:fontFamily="@font/rubik_medium"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/trackImageIV"
+        app:layout_constraintTop_toBottomOf="@+id/songTitleTV"
+        app:layout_constraintBottom_toBottomOf="@+id/trackImageIV"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
